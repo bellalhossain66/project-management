@@ -1,0 +1,53 @@
+<%- include('header.ejs') %>
+    <link rel="stylesheet" href="./plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <div class="content-wrapper">
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">Open Projects</h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="/member">Home</a></li>
+                            <li class="breadcrumb-item active">Open Projects</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 col-sm-12 col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Open project</h3><span id="userId" userId="<%- userId %>"></span>
+                            </div>
+
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table id="example1" class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Sn.</th>
+                                                <th>Project Id</th>
+                                                <th>Project Name</th>
+                                                <th>Team Member</th>
+                                                <th>Project Progress</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="project-list"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <%- include('footer.ejs') %>
+        <script src="./plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="./plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>

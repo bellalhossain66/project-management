@@ -1,0 +1,152 @@
+// supervisor login
+POST http://localhost:5005/api/supervisor/login
+Content-Type: application/json
+
+{
+    "email": "bellalhoss66@gmail.com",
+    "password": "12345"
+}
+
+###
+// all member view
+GET http://localhost:5005/api/supervisor/member
+Content-Type: application/json
+
+###
+// all member records view
+GET http://localhost:5005/api/supervisor/all-member
+Content-Type: application/json
+
+###
+// add new project
+POST http://localhost:5005/api/supervisor/add-project
+Content-Type: application/json
+
+{
+    "name": "",
+    "description": "",
+    "client": "",
+    "budget": "",
+    "amountSpend": "",
+    "duration": ""
+}
+
+###
+// all project records
+GET http://localhost:5005/api/supervisor/all-project
+Content-Type: application/json
+
+###
+// all project view
+GET http://localhost:5005/api/supervisor/project
+Content-Type: application/json
+
+###
+// add project member
+POST http://localhost:5005/api/supervisor/add-member
+Content-Type: application/json
+
+{
+    "projectId": "",
+    "memberId": ""
+}
+
+###
+// all project member
+GET http://localhost:5005/api/supervisor/project-member/P-0001
+Content-Type: application/json
+
+###
+// project member delete
+DELETE http://localhost:5005/api/supervisor/project-member-delete/7
+Content-Type: application/json
+
+###
+// delete project
+DELETE http://localhost:5005/api/supervisor/project-delete/P-0005
+Content-Type: application/json
+
+###
+// project view by id
+GET http://localhost:5005/api/supervisor/project-view/P-0005
+Content-Type: application/json
+
+###
+// update project
+PATCH http://localhost:5005/api/supervisor/project-update
+Content-Type: application/json
+
+{
+    "name": "",
+    "description": "",
+    "client": "",
+    "budget": "",
+    "amountSpend": "",
+    "duration": "",
+    "status": ""
+}
+
+###
+// all ongoing project view
+GET http://localhost:5005/api/supervisor/all-ongoing-project
+Content-Type: application/json
+
+###
+// all completed project view
+GET http://localhost:5005/api/supervisor/all-completed-project
+Content-Type: application/json
+
+###
+// member login
+POST http://localhost:5005/api/member/login
+Content-Type: application/json
+
+{
+    "email": "bellal@gmail.com",
+    "password": "bellal"
+}
+
+###
+// all project member for member
+GET http://localhost:5005/api/member/project-member/P-0001
+Content-Type: application/json
+
+###
+// all ongoing project view for member
+GET http://localhost:5005/api/member/all-ongoing-project/bellal
+Content-Type: application/json
+
+###
+// all completed project view for member
+GET http://localhost:5005/api/member/all-completed-project/bellal
+Content-Type: application/json
+
+###
+// all open project view for member
+GET http://localhost:5005/api/member/all-open-project
+Content-Type: application/json
+
+###
+// all applied project view for member
+GET http://localhost:5005/api/member/all-applied-project/bellal
+Content-Type: application/json
+
+###
+// project enrollment
+POST http://localhost:5005/api/member/project-enrollment
+Content-Type: application/json
+
+{
+    "projectId": "P-0009",
+    "memberId": "bellal"
+}
+
+###
+// project enrollment exit
+DELETE http://localhost:5005/api/member/exit-enrollment
+Content-Type: application/json
+
+{
+    "projectId": "P-0009",
+    "memberId": "bellal"
+}
